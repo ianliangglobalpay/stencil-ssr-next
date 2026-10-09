@@ -1,0 +1,37 @@
+{
+  "name": "@example/stencil-lib-react",
+  "version": "0.0.1",
+  "description": "React bindings for Stencil Component Library",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./next": {
+      "types": "./dist/components.server.d.ts",
+      "import": "./dist/components.server.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc --watch"
+  },
+  "dependencies": {
+    "@example/stencil-lib": "workspace:*",
+    "@stencil/react-output-target": "^1.6.4"
+  },
+  "peerDependencies": {
+    "@example/stencil-lib": "workspace:*",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "~5.6.0"
+  }
+}

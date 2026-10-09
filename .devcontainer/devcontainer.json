@@ -1,0 +1,4 @@
+{
+  "name": "Stencil NextJS Starter",
+  "image": "ghcr.io/codesandbox/devcontainers/typescript-node:22"
+}

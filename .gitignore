@@ -1,0 +1,8 @@
+node_modules
+dist
+loader
+.next
+.DS_Store
+*.log
+hydrate
+.stencil

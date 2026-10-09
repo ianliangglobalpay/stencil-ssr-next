@@ -1,0 +1,57 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "command": "pnpm install",
+      "name": "Installing Dependencies"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "start": {
+      "name": "start",
+      "command": "pnpm start",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
+    },
+    "start:stencil": {
+      "name": "start:stencil",
+      "command": "pnpm start:stencil"
+    },
+    "start:next-wrapper": {
+      "name": "start:next-wrapper",
+      "command": "pnpm start:next-wrapper"
+    },
+    "start:next-app": {
+      "name": "start:next-app",
+      "command": "pnpm start:next-app"
+    },
+    "start:next-app:wait": {
+      "name": "start:next-app:wait",
+      "command": "pnpm start:next-app:wait"
+    },
+    "start:reload-trigger": {
+      "name": "start:reload-trigger",
+      "command": "pnpm start:reload-trigger"
+    },
+    "build": {
+      "name": "build",
+      "command": "pnpm build"
+    },
+    "build:stencil": {
+      "name": "build:stencil",
+      "command": "pnpm build:stencil"
+    },
+    "build:next-wrapper": {
+      "name": "build:next-wrapper",
+      "command": "pnpm build:next-wrapper"
+    },
+    "build:next-app": {
+      "name": "build:next-app",
+      "command": "pnpm build:next-app"
+    }
+  }
+}

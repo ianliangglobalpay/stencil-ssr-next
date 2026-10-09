@@ -1,0 +1,24 @@
+{
+  "name": "stencil-next-repro",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "pnpm run build:stencil && pnpm run build:react-wrapper && concurrently -n stencil,react-wrapper,next-app -c blue,green,magenta \"pnpm run start:stencil\" \"pnpm run start:react-wrapper\" \"pnpm run start:next-app\"",
+    "start:stencil": "pnpm --filter @example/stencil-lib run start",
+    "start:react-wrapper": "pnpm --filter @example/stencil-lib-react run start",
+    "start:next-app": "pnpm --filter next-app run dev",
+    "build": "pnpm run build:stencil && pnpm run build:react-wrapper && pnpm run build:next-app",
+    "build:stencil": "pnpm --filter @example/stencil-lib run build",
+    "build:react-wrapper": "pnpm --filter @example/stencil-lib-react run build",
+    "build:next-app": "pnpm --filter next-app run build"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.0.0",
+    "wait-on": "^8.0.0"
+  }
+}
